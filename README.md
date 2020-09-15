@@ -10,6 +10,4 @@ Parag, KV, (2020) “Improved real-time estimation of reproduction numbers at lo
 
 Here we provide Matlab and R code to implement the main methods described in the text.
 
-Main functions: epiFilter (or epiFilterSm) performs forward filtering to generate causal R estimates.
-              : epiSmooth performs backward smoothing to generate R estimates that use all possible information.
-              : recursPredict provides one-step-ahead predictions
+Main functions: epiFilter (or epiFilterSm) performs forward filtering to generate causal R estimates; epiSmooth performs backward smoothing to generate R estimates that use all possible information and recursPredict provides one-step-ahead predictions.
