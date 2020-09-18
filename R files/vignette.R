@@ -14,22 +14,20 @@
 closeAllConnections(); rm(list=ls())
 cat("\014"); graphics.off()
 
-# Main packages
-library("EpiEstim")
-library("caTools")
-
 # Set working directory to source
 this.dir <- dirname(parent.frame(2)$ofile)
 setwd(this.dir)
 # Folder path for results
-folres = paste0("./results/")
+folres = paste0("./results/test/")
 
-# Key functions for APEestim
-source('apeEstim.R'); source('apePredPost.R')
-source('apeSpecific.R'); source('plotAPEWindow.R')
-# Key functions for EpiFilter
-source('epiFilter.R'); source('recursPredict.R')
-source('epiSmoother.R'); source('plotEpiFilter.R')
+# Main packages
+library("EpiEstim")
+library("caTools")
+# Main functions to run EpiFilter
+files.sources = list.files(path = "./main")
+for (i in 1:length(files.sources)) {
+  source(paste0(c("./main/", files.sources[i]), collapse = ''))
+}
 
 # Decide if to use pre-processed data (5-day moving average)
 preProc = 1; if(preProc){print('Using filtered data')}
@@ -38,25 +36,25 @@ win = 7  # weekly
 
 if(!preProc){
   # Load flu data preprocessed with 5-day moving average
-  Iflu = read.csv('data/Iflu.csv'); Iflu = Iflu[[1]]
-  Lflu = read.csv('data/Lflu.csv'); Lflu = Lflu[[1]]
-  genflu = read.csv('data/genflu.csv'); genflu = genflu[[1]]
+  Iflu = read.csv('data/test/Iflu.csv'); Iflu = Iflu[[1]]
+  Lflu = read.csv('data/test/Lflu.csv'); Lflu = Lflu[[1]]
+  genflu = read.csv('data/test/genflu.csv'); genflu = genflu[[1]]
   
   # Load sars data preprocessed with 5-day moving average
-  Isars = read.csv('data/Isars.csv'); Isars = Isars[[1]]
-  Lsars = read.csv('data/Lsars.csv'); Lsars = Lsars[[1]]
-  gensars = read.csv('data/gensars.csv'); gensars = gensars[[1]]
+  Isars = read.csv('data/test/Isars.csv'); Isars = Isars[[1]]
+  Lsars = read.csv('data/test/Lsars.csv'); Lsars = Lsars[[1]]
+  gensars = read.csv('data/test/gensars.csv'); gensars = gensars[[1]]
 
 }else{
   # Load flu data preprocessed with 5-day moving average
-  Iflu = read.csv('data/IfluFilt.csv'); Iflu = Iflu[[1]]
-  Lflu = read.csv('data/LfluFilt.csv'); Lflu = Lflu[[1]]
-  genflu = read.csv('data/genflu.csv'); genflu = genflu[[1]]
+  Iflu = read.csv('data/test/IfluFilt.csv'); Iflu = Iflu[[1]]
+  Lflu = read.csv('data/test/LfluFilt.csv'); Lflu = Lflu[[1]]
+  genflu = read.csv('data/test/genflu.csv'); genflu = genflu[[1]]
   
   # Load sars data preprocessed with 5-day moving average
-  Isars = read.csv('data/IsarsFilt.csv'); Isars = Isars[[1]]
-  Lsars = read.csv('data/LsarsFilt.csv'); Lsars = Lsars[[1]]
-  gensars = read.csv('data/gensars.csv'); gensars = gensars[[1]]
+  Isars = read.csv('data/test/IsarsFilt.csv'); Isars = Isars[[1]]
+  Lsars = read.csv('data/test/LsarsFilt.csv'); Lsars = Lsars[[1]]
+  gensars = read.csv('data/test/gensars.csv'); gensars = gensars[[1]]
 }
 
 # Times of series
