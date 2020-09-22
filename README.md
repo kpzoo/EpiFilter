@@ -6,7 +6,7 @@ Takes a forward-backward approach and provides estimates that combine advantages
 Method is exact (and optimal given a grid over R) and deterministic (produces the same answer on the same data).
 
 For full details see: 
-Parag, KV, (2020) “Improved real-time estimation of reproduction numbers at low case incidence and between epidemic waves” medRxiv.
+Parag, KV, (2020) “Improved real-time estimation of reproduction numbers at low case incidence and between epidemic waves” medRxiv 2020.09.14.20194589.
 
 Here we provide Matlab and R code to implement the main methods described in the text.
 
