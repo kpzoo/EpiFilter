@@ -7,6 +7,8 @@
 # Assumptions
 # - observation model is Poisson renewal equation (as in EpiEstim)
 # - reproduction number state space model is a simple diffusion
+# - accounts for differing contributions of imported and local cases
+# - simply replace Iday with the local versus total count to do this
 
 # Inputs - grid on reproduction numbers (Rgrid), size of grid (m), diffusion noise (eta),
 # prior on R (pR0), max time (nday), total infectiousness (Lday), incidence (Iday), confidence (a)
