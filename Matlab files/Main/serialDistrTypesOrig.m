@@ -36,16 +36,11 @@ function pr = gammaDistr(p, x, shapePm)
 % Scale parameter based on mean = shapePm*scalePm
 scalePm = 1/(p*shapePm); ratePm = 1/scalePm;
 
-% Gamma probabilities as difference in CDFs
-pr = gamcdf(x, shapePm, scalePm) - gamcdf(x-1, shapePm, scalePm);
-
-% %Gamma (Erlang) probabilities
-% pr = -log(gamma(shapePm)) + shapePm*log(ratePm) +...
-%     (shapePm-1)*log(x) - ratePm*x;
-% pr = exp(pr);
-% pr = gampdf(x, shapePm, scalePm);
-
-
+% Gamma (Erlang) probabilities
+pr = -log(gamma(shapePm)) + shapePm*log(ratePm) +...
+    (shapePm-1)*log(x) - ratePm*x;
+pr = exp(pr);
+%pr = gampdf(k, shapePm, scalePm);
 
 %% Geometric distribution, p is prob success
 function pr = geomDistr(p, x)

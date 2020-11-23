@@ -1,7 +1,8 @@
 % Given discrete R distribution get Poiss predictions
-function [pred, predInt] = recursPredict(Rgrid, pR, Lam, Rmean)
+function [pred, predInt] = recursPredictMax(Rgrid, pR, Lam, Rmean, Imax)
 
 % Assumptions and notes
+% - adapts its maxima on the incidence space
 % - uses posterior over R from recursive filter
 % - computes APE score for predictions
 
@@ -14,7 +15,7 @@ if length(Rgrid) ~= m || length(Lam) ~= nday
 end
 
 % Discrete space of possible predictions
-Igrid = 0:200; lenI = length(Igrid);
+Igrid = 0:round(2*Imax); lenI = length(Igrid);
 % Check if close to upper bound
 pred0 = Lam.*Rmean; pred0 = pred0(2:end);
 if any(pred0 > 0.9*max(Igrid))
