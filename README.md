@@ -6,7 +6,7 @@ Takes a forward-backward approach and provides estimates that combine advantages
 Method is exact (and optimal given a grid over R) and deterministic (produces the same answer on the same data).
 
 For full details see: 
-Parag, KV, (2020) “Improved real-time estimation of reproduction numbers at low case incidence and between epidemic waves” medRxiv 2020.09.14.20194589.
+Parag KV (2020) “Improved real-time estimation of reproduction numbers at low case incidence and between epidemic waves” medRxiv 2020.09.14.20194589.
 
 Here we provide Matlab and R code to implement the main methods described in the text.
 
@@ -16,3 +16,10 @@ Notes on usage:
 1) Incidence curve needs to start with a non-zero value
 2) Currently only uses gamma serial interval distributions but can be generalised
 3) Fit of the filtered one-step-ahead predictions gives a measure of model adequacy
+
+An application of this approach to New Zealand together with a computation of the confidence in elimination can be found on the New Zealand branch. This extension
+separates cases based on whether they are local to the region of interest or imported. 
+
+Details are here:
+Parag KV and Donnelly CA (2020) "Novel early-warning system for evaluating control and elimination of SARS-CoV-2 reveals alignment of policy with 
+local transmission in New Zealand" medRxiv 2020.11.23.20236968.
