@@ -19,7 +19,7 @@ Notes on usage:
 
 
 New Zealand branch includes extra functionality for computing local (R, Z) framework described in 
-Parag, KV and Donnelly, CA. (2020) “Novel early-warning system for evaluating control and elimination of SARS-CoV-2 reveals alignment of policy with local transmission in New Zealand” medRxiv.
+Parag KV and Donnelly CA (2020) "Novel early-warning system for evaluating control and elimination of SARS-CoV-2 reveals alignment of policy with local transmission in New Zealand" medRxiv 2020.11.23.20236968.
 
 Here the R of basic EpiFilter is generalised to account for the distinction between local and imported cases. Second, a new metric Z, which assesses
 the confidence in local elimination at any time by integrating R is also provided. We apply these to uncover how trends in community transmission in
