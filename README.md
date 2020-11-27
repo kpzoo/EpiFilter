@@ -17,9 +17,3 @@ Notes on usage:
 2) Currently only uses gamma serial interval distributions but can be generalised
 3) Fit of the filtered one-step-ahead predictions gives a measure of model adequacy
 
-An application of this approach to New Zealand together with a computation of the confidence in elimination can be found on the New Zealand branch. This extension
-separates cases based on whether they are local to the region of interest or imported. 
-
-Details are here:
-Parag KV and Donnelly CA (2020) "Novel early-warning system for evaluating control and elimination of SARS-CoV-2 reveals alignment of policy with 
-local transmission in New Zealand" medRxiv 2020.11.23.20236968.
