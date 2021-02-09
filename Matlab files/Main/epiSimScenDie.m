@@ -49,10 +49,6 @@ switch(scenNo)
         Rtrue = Rtrue + normrnd(0.5, 2, [1 nday]);
         m = 20; B = ones(m, 1)/m;
         Rtrue = filter(B, 1, Rtrue);
-        % Check for noise
-        if any(Rtrue < 0)
-            Rtrue(Rtrue < 0) = 0;
-        end
     case 6
         % Second (sine) wave dynamics
         Rtrue = Rch(1) + Rch(2)*sind(tch(1)*(1:nday));

@@ -48,10 +48,17 @@ for i = 2:nday
     Rm(i) = pR(i, :)*Rgrid';
     Rcdf = cumsum(pR(i, :));
     
+    if any(isnan(Rcdf))
+        assignin('base', 'Rcdf', Rcdf); assignin('base', 'pI', pI);
+        assignin('base', 'pR', pR); assignin('base', 'Lam', Lam);
+        error('Issue with Rcdf');
+    end
+    
     % Quantiles from estimates
     ids(1) = find(Rcdf > 0.5, 1, 'first');
     ids(2) = find(Rcdf > 0.025, 1, 'first');
     ids(3)= find(Rcdf > 0.975, 1, 'first');
+    
     clear('Rcdf'); Rmed(i) = Rgrid(ids(1)); 
     Rlow(i) = Rgrid(ids(2)); Rhigh(i) = Rgrid(ids(3));
 end

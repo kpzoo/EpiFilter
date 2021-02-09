@@ -9,7 +9,7 @@ clearvars; clc; close all; tic;
 % - assumes serial interval from Ferguson et al
 
 % Directory and if saving
-thisDir = cd; saveTrue = 1;
+thisDir = cd; saveTrue = 0;
 
 % Directory of some main code and plotting options
 cd('Main'); mainDir = cd;
