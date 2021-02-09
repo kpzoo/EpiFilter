@@ -16,6 +16,7 @@ cd('Main'); mainDir = cd;
 cd(thisDir); addpath(mainDir);
 % Default plotting options
 [grey1, grey2, cmap] = defaultSet(10);
+grey2 = [0.65 0.65 0.65];
 
 %% Extract empirical data from WHO and setup renewal model
 
@@ -37,7 +38,7 @@ cd(loadFol);
 switch scenNo
     case 1
         % Victoria intervention dates
-        intervs = {'16-03-20', '30-06-20', '02-08-20', '18-10-20', '26-11-20'};
+        intervs = {'16-03-20', '30-06-20', '02-08-20', '18-10-20', '23-11-20', '26-11-20'};
         % Start and stop dates
         start = datetime('23-02-20', 'InputFormat', 'dd-MM-yy');
         stop = datetime('27-11-20', 'InputFormat', 'dd-MM-yy');

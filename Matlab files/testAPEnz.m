@@ -14,8 +14,8 @@ cd(thisDir); addpath(mainDir);
 % Default plotting options
 [grey1, grey2, cmap] = defaultSet(10);
 
-% HK intervention dates
-intervs = {'25-01-20', '25-03-20', '29-03-20', '05-05-20', '27-05-20', '04-07-20', '13-07-20', '19-07-20', '23-11-20'};
+% NZ intervention dates
+intervs = {'19-03-20','26-03-20', '14-05-20', '09-06-20', '12-08-20'};
 
 % Reformat intervention dates
 intervs = datetime(intervs, 'InputFormat', 'dd-MM-yy');

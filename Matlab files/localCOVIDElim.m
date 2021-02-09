@@ -29,7 +29,7 @@ disp(['Examining data from ' scenNam]);
 % Dates of lockdown and release for each
 lockdowns = {'25-03-20', '29-03-20'}; releases = {'14-05-20', '27-05-20'};
 % Other dates of interest
-secondwave = {'13-08-20', '20-07-20'}; present = {'07-10-2020', '23-10-20'};
+secondwave = {'13-08-20', '20-07-20'}; present = {'07-10-2020', '23-11-20'};
 
 % Identifier for saving and data type
 namstr = ['_' scenNam]; dataType = 2;
@@ -102,7 +102,7 @@ switch scenNo
         % Get indices and corresponding dates
         datesImp = dates(importCase); datesLoc = dates(~importCase);
          % Starting time date of interest
-        start = datetime('25-01-20', 'InputFormat', 'dd-MM-yy');
+        start = datetime('23-01-20', 'InputFormat', 'dd-MM-yy');
         
 end
 

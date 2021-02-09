@@ -66,7 +66,7 @@ Zbef = Zsmooth(idint-1); Zaf1 = Zsmooth(idwk1-1); Zaf2 = Zsmooth(idwk2-1);
 load('/Users/kp10/Desktop/Imperial/2020/Term 2/Journals/Elimination paper/figures/proc_Vic.mat')
 
 % Victoria intervention dates
-intervs = {'16-03-20', '20-03-20', '02-05-20', '14-05-20', '30-06-20', '02-08-20', '18-10-20', '22-11-20', '23-11-20'};
+intervs = {'16-03-20', '20-03-20', '02-05-20', '14-05-20', '30-06-20', '02-08-20', '18-10-20', '22-11-20', '27-11-20'};
 
 % Reformat intervention dates
 intervs = datetime(intervs, 'InputFormat', 'dd-MM-yy');
