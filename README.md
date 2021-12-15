@@ -20,3 +20,4 @@ Notes on usage:
 3) Fit of the filtered one-step-ahead predictions gives a measure of model adequacy
   - this follows from https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007990 
 
+See ReadMe in New Zealand branch for extensions to the method for local cases and probabilities in elimination described in Parag KV, Cowling BJ and Donnelly CA. (2021) Deciphering early-warning signals of SARS-CoV-2 elimination and resurgence from limited data at multiple scales. J. R. Soc. Interface. 18, 20210569. http://doi.org/10.1098/rsif.2021.0569
