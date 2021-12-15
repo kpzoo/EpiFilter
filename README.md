@@ -6,7 +6,8 @@ Takes a forward-backward approach and provides estimates that combine advantages
 Method is exact (and optimal given a grid over R) and deterministic (produces the same answer on the same data).
 
 For full details see: 
-Parag, KV, (2020) “Improved estimation of time-varying reproduction numbers at low case incidence and between epidemic waves” medRxiv 2020.09.14.20194589.
+Parag KV. (2021) Improved estimation of timevarying reproduction numbers at low case incidence and between epidemic waves. PLoS
+Comput. Biol. 17, e1009347. https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009347
 
 Here we provide Matlab and R code to implement the main methods described in the text.
 
@@ -23,10 +24,12 @@ Notes on usage:
 
 
 New Zealand branch includes extra functionality for computing local (R, Z) framework described in 
-Parag KV and Donnelly CA (2020) "Novel early-warning system for evaluating control and elimination of SARS-CoV-2 reveals alignment of policy with local transmission in New Zealand" medRxiv 2020.11.23.20236968.
+Parag KV, Cowling BJ and Donnelly CA. (2021) Deciphering early-warning signals of SARS-CoV-2 elimination and resurgence from limited data at multiple scales. J. R. Soc. Interface. 18, 20210569. http://doi.org/10.1098/rsif.2021.0569
 
 Here the R of basic EpiFilter is generalised to account for the distinction between local and imported cases. Second, a new metric Z, which assesses
 the confidence in local elimination at any time by integrating R is also provided. We apply these to uncover how trends in community transmission in
-New Zealand (which features a prolonged period of low or no incidence that destabilises many other R estimators) align with policy action-times.
+New Zealand (which features a prolonged period of low or no incidence that destabilises many other R estimators) align with policy action-times. 
+
+Key Matlab code for each case study (New Zealand, Hong Kong and Victoria Australia) are provided in separate branches while the main R code (vignetteImports.R) is in the New Zealand branch.
 
 Further theory surrounding Z and probabilities of elimination can be found here: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008478 
